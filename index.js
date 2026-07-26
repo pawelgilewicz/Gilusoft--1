@@ -9,6 +9,13 @@ import session from "express-session";
 import env from "dotenv";
 import nodemailer from "nodemailer";
 
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
 const app = express();
 const port = 3000;
 const saltRounds = 10;
