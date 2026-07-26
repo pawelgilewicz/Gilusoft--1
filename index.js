@@ -8,14 +8,14 @@ import GoogleStrategy from "passport-google-oauth2";
 import session from "express-session";
 import env from "dotenv";
 import nodemailer from "nodemailer";
-import { pool } from "pg"
+// import { Pool } from "pg"
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: {
+//     rejectUnauthorized: false
+//   }
+// });
 
 const app = express();
 const port = 3000;
@@ -45,6 +45,9 @@ const db = new pg.Client({
   database: process.env.PG_DATABASE,
   password: process.env.PG_PASSWORD,
   port: process.env.PG_PORT,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 db.connect();
 
