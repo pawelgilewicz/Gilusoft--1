@@ -8,6 +8,7 @@ import GoogleStrategy from "passport-google-oauth2";
 import session from "express-session";
 import env from "dotenv";
 import nodemailer from "nodemailer";
+import {pool} from "pg"
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
