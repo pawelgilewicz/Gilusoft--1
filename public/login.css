@@ -1,0 +1,283 @@
+/* body{
+     font-family: "Black Ops One", system-ui;
+}
+.row{
+    display: flex;
+    position: relative;
+    
+
+    justify-content: center;
+    gap:200px;
+}
+#login{
+
+text-align: center;
+}
+
+.col{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+   width: 400px;
+   
+   height: 500px;
+
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px ;
+}
+.log{
+    width: 600px;
+}
+
+.card-body{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    padding: 20px;
+}
+.btn{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 0px;
+    font-family: "Black Ops One",system-ui;
+    background-color: white;
+    align-self: center;
+}
+
+.btn-dark{
+    background-color: black;
+    color: white;
+}
+
+
+input{
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+    border: solid black 1px;
+}
+form{
+    text-align: center;
+}
+
+
+.google{
+    align-self: center;
+    background-color: white;
+    border-radius: 0px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.google >a{
+    text-decoration: none;
+    color: black;
+    font-family: system-ui;
+} */
+
+/* Global Reset and Body */
+body {
+    font-family: "Black Ops One", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+#login-title {
+    text-align: center;
+    font-size: 60px;
+    color: rgb(5, 68, 47);
+    margin-bottom: 60px;
+}
+
+/* Flexbox Row Container */
+.login-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    flex-wrap: wrap; /* Pozwala na bezpieczne zawijanie kolumn na mniejszych ekranach */
+}
+
+/* Base Column Styles */
+.login-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #64748b; /* Ładniejszy odcień szarości (Slate) */
+    width: 100%;
+    max-width: 450px; /* Maksymalna szerokość kolumny */
+    min-height: 480px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Dedykowana odrobinę szersza kolumna logowania */
+.method-local {
+    max-width: 500px;
+}
+
+/* Cards & Wrappers */
+.login-card {
+    width: 100%;
+}
+
+.login-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form {
+    width: 100%;
+    text-align: center;
+}
+
+/* Inputs and Forms */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.form-label {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 320px;
+    height: 40px;
+    border: 2px solid #0f172a;
+    padding: 0 12px;
+    font-size: 16px;
+    font-family: system-ui, sans-serif; /* Standardowy font dla ułatwienia wpisywania tekstu */
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #ffb800;
+    box-shadow: 0 0 0 3px rgba(255, 184, 0, 0.3);
+}
+
+/* Buttons Styling */
+.btn-submit {
+    width: 100%;
+    max-width: 220px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Black Ops One", system-ui;
+    font-size: 18px;
+    background-color: #ffffff;
+    color: #0f172a;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #ffb800; /* Złoty akcent przy najechaniu */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Google Login Custom Container & Positioning */
+.google-logo-wrapper {
+    margin-bottom: 20px;
+}
+
+.google-badge-img {
+    width: 180px;
+    height: auto;
+    background-color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.google-btn-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 260px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-btn-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.google-link {
+    text-decoration: none;
+    color: #0f172a;
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- MOBILE RESPONSIVENESS (Zarządzanie smartfonami) --- */
+@media (max-width: 968px) {
+    #login-title {
+        font-size: 44px;
+        margin-bottom: 40px;
+    }
+    
+    .login-row {
+        flex-direction: column; /* Układa logowanie lokalne i Google jedno pod drugim */
+        align-items: center;
+        gap: 30px;
+    }
+
+    .login-col {
+        max-width: 100%; /* Kolumny biorą pełną szerokość ekranu telefonu minus padding */
+        min-height: auto;
+        padding: 40px 20px;
+    }
+}

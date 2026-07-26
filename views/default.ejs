@@ -1,0 +1,131 @@
+<!--<%-//include("partials/header.ejs")%>
+<div>
+<div id="" class="field welcome">
+    <img id="Welcome" src="https://png.pngtree.com/png-clipart/20211116/original/pngtree-letter-g-logo-png-image_6941148.png" alt="" width="250px" height="250px">
+    <h1>Welcome in <font face="black ops one">Gilusoft</font></h1>
+</div>
+<div id="About" class="field about">
+    <div>
+        <h1 style="font-family: black ops one;">Who we are</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sunt, amet libero dolor atque corrupti accusamus quos autem praesentium veniam quas vero quibusdam veritatis impedit doloremque dicta saepe perspiciatis voluptas laborum ipsam sequi facilis? Pariatur suscipit quibusdam odio fugit corporis, et labore aliquam tenetur possimus. Doloremque quos veniam et libero iste eveniet dolores laborum accusamus impedit, molestias nemo voluptates! Dolores culpa vel iure vero laboriosam optio, aliquid eaque possimus neque est nobis quidem laborum harum cum sequi! Harum laboriosam tempore consequatur eius cum suscipit provident animi vel deserunt officiis possimus saepe dolorum maiores ipsum numquam temporibus, exercitationem veniam nesciunt praesentium!
+        </p>
+    </div>
+    <div>
+        <img src="https://t4.ftcdn.net/jpg/08/34/26/69/360_F_834266922_yG4cgGtcJ7UtAKPPvN4aie2Sc1qxRZzh.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://t4.ftcdn.net/jpg/08/34/26/69/360_F_834266922_yG4cgGtcJ7UtAKPPvN4aie2Sc1qxRZzh.jpg" alt="">
+    </div>
+    <div>
+    <h1 style="font-family: black ops one;">Quality Above all</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sunt, amet libero dolor atque corrupti accusamus quos autem praesentium veniam quas vero quibusdam veritatis impedit doloremque dicta saepe perspiciatis voluptas laborum ipsam sequi facilis? Pariatur suscipit quibusdam odio fugit corporis, et labore aliquam tenetur possimus. Doloremque quos veniam et libero iste eveniet dolores laborum accusamus impedit, molestias nemo voluptates! Dolores culpa vel iure vero laboriosam optio, aliquid eaque possimus neque est no
+        </p>
+    </div>
+    
+    
+</div>
+<div id="Services" class="field services">
+    <div><h1 style="font-family: black ops one;">
+        Our Services
+    </h1>
+    <div class="service">
+        <div><h1>Asembling webapps</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur est velit libero necessitatibus, placeat vitae dolorem delectus accusantium aliquid officia voluptatum? Ipsum autem error, nemo id architecto accusamus voluptatem optio?
+        </p></div>
+        <div><img src="https://www.simpalm.com/wp-content/uploads/Web-Application.webp" alt=""></div>
+</div>
+<div class="service">
+        <div><h1>Asembling webapps</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur est velit libero necessitatibus, placeat vitae dolorem delectus accusantium aliquid officia voluptatum? Ipsum autem error, nemo id architecto accusamus voluptatem optio?
+        </p></div>
+        <div><img src="https://www.simpalm.com/wp-content/uploads/Web-Application.webp" alt=""></div>
+
+</div>
+
+    
+</div>
+</div>
+
+
+<%-//include("partials/footer.ejs")%> -->
+
+
+<%- include("partials/header.ejs") %>
+
+<div class="main-container">
+    <!-- Welcome Section -->
+    <section id="Welcome" class="section-field welcome-section">
+        <img class="welcome-logo" src="http://localhost:4000/images/logo.png" alt="Gilusoft Logo">
+        <h1 class="welcome-title">Welcome in <span class="brand-gname">Gilusoft</span></h1>
+    </section>
+
+    <!-- About Section -->
+    <section id="About" class="section-field about-section">
+        <div class="about-block">
+            <h1 class="accent-title">Who we are</h1>
+            <p class="section-text">
+                Your business deserves more than just another website.
+
+It deserves a digital experience that captures attention, builds trust, and turns visitors into loyal customers.
+
+We create modern web applications that don't just look outstanding—they solve problems, improve efficiency, and help businesses grow faster. Every line of code is written with purpose. Every feature is designed to create value.
+
+Because when your business succeeds, our work has done its job.</p>
+        </div>
+        <div class="about-block">
+            <img class="about-image" src="https://t4.ftcdn.net/jpg/08/34/26/69/360_F_834266922_yG4cgGtcJ7UtAKPPvN4aie2Sc1qxRZzh.jpg" alt="Team working">
+        </div>
+        <div class="about-block">
+            <img class="about-image" src="https://t4.ftcdn.net/jpg/08/34/26/69/360_F_834266922_yG4cgGtcJ7UtAKPPvN4aie2Sc1qxRZzh.jpg" alt="Our Quality">
+        </div>
+        <div class="about-block">
+            <h1 class="accent-title">Excellence Isn't Optional</h1>
+            <p class="section-text">
+              In today's market, people decide within seconds whether they trust your business.
+
+Those seconds matter.
+
+That's why we focus on every detail—from performance and security to seamless user experience and future-proof architecture. We create software that works flawlessly today and continues to support your growth tomorrow.
+
+We don't cut corners.
+We don't settle for "good enough."
+
+We build products that inspire confidence, strengthen your brand, and give your business a competitive edge.
+
+Because your business deserves software that's as ambitious as you are.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+<section id="Services" class="section-field services-section">
+    <h1 class="accent-title services-main-title covered">Our Services</h1>
+    
+    <!-- Sprawdzamy czy zmienna istnieje i czy ma elementy -->
+    <% if (locals.services && services.length > 0) { %>
+        <div class="services-wrapper">
+            
+            <!-- Pętla forEach generuje tylko karty poszczególnych usług -->
+            <% services.forEach(element => { %>
+                <div class="service-card">
+                    <div class="service-info">
+                        <h2 class="covered"><%= element.title %></h2>
+                        <p class="section-text covered"><%= element.content %></p>
+                    </div>
+                    <div class="service-media">
+                        <img class="service-image" src="<%= element.image_url %>" alt="Web app development">
+                    </div>
+                </div>
+            <% }); %>
+
+        </div>
+    <% } else { %>
+        <p class="section-text covered" style="text-align: center;">No services available at the moment.</p>
+    <% } %>
+</section>
+
+  
+</div>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Black+Ops+One&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Contact Us - Gilusoft</title>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h1 id="contact-main-title">Contact Us</h1>
+        <hr class="contact-divider">
+
+        <div class="contact-card">
+            <div class="contact-card-body">
+                <form action="/contact" method="POST" class="contact-form">
+                    
+                    <div class="contact-form-group">
+                        <label for="name" class="contact-label">Your Name</label>
+                        <input type="text" id="name" class="contact-control" name="name" required placeholder="e.g., John Doe">
+                    </div>
+
+                    
+
+                    <div class="contact-form-group">
+                        <label for="message" class="contact-label">Message</label>
+                        <textarea id="message" class="contact-textarea" name="message" required placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-footer-nav">
+            <a class="contact-back-link" href="/default">Back to Home</a>
+        </div>
+    </div>
+    
+</body>
+</html>

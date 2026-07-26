@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+
+    
+  <div class="">
+    <h1 id="login">Register</h1>
+
+    <div class="row">
+      <div class="col log">
+        <div class="card">
+          <div class="card-body">
+
+            Makes POST request to /login route 
+            <form action="/register" method="POST">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="username">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password">
+              </div>
+              <button type="submit" class="btn ">Register</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <img src="https://logosmarcas.net/wp-content/uploads/2020/09/Google-Emblema.png" alt="google-logo" width="200px" height="auto" style=" position: relative;bottom: 50px; background-color: white; padding: 10px; border-radius: 10px;" >
+            
+        <div class="card">
+            
+          <div class="card-body">
+            <div class="google"><a  href="/auth/google" role="button">
+                 
+
+              Sign Up with Google
+            </a></div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    
+</body>
+</html>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Register - Gilusoft</title>
+</head>
+<body>
+
+    <div class="login-wrapper">
+        <h1 id="login-title">Register</h1>
+
+        <div class="login-row">
+            <!-- Left Column: Standard Register -->
+            <div class="login-col method-local">
+                <div class="login-card">
+                    <div class="login-card-body">
+                        <form action="/register" method="POST" class="auth-form">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" class="form-control" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" class="form-control" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Google Register -->
+            <div class="login-col method-google">
+                <div class="google-logo-wrapper">
+                    <img src="https://logosmarcas.net/wp-content/uploads/2020/09/Google-Emblema.png" alt="google-logo" class="google-badge-img">
+                </div>
+                
+                <div class="login-card">
+                    <div class="login-card-body">
+                        <div class="google-btn-container">
+                            <a class="google-link" href="/auth/google" role="button">
+                                Sign Up with Google
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+

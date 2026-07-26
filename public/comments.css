@@ -1,0 +1,262 @@
+body{
+    display: grid;
+    grid-template-rows: 1 8 1;
+}
+header{
+    font-family: "black ops one" system-ui;
+    
+    left:0px;
+    right: 0px;
+    top:0px;
+    background-color: rgb(5, 68, 47);;
+    display: grid;
+    grid-template-columns: 1 1 ;
+    height: 100px;
+    color: white;
+     
+}
+
+body{
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    color: white;
+    
+}
+footer{
+grid-row: 3 4;
+}
+.back{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(4, 49, 34);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+.content {
+    resize:none;
+    border:none;
+}
+
+.details{
+    display: grid;
+    grid-template-columns: 1 1 1 1;
+    grid-template-rows: 1 1;
+}
+
+textarea{
+    width: 1200px;
+    height: 600px;
+    font-family: system-ui;
+    font-size: 30px;
+}
+
+
+/* Card Container */
+.review-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header Section */
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+/* Author and Date Layout */
+.review-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.review-author {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.review-date {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Stars Rating */
+.review-rating {
+    display: flex;
+    gap: 2px;
+}
+
+.rating-star {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.star-filled {
+    color: #ffb800; /* Beautiful golden yellow */
+}
+
+.star-empty {
+    color: #cbd5e1; /* Soft gray for empty stars */
+}
+
+/* Title Section */
+.review-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0 0 12px 0;
+}
+
+/* Textarea Content with Locked Resize */
+.review-content {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #334155;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    
+    /* Disables manual resizing by the user */
+    resize: none; 
+    
+    /* Removes the default focus ring since it is readonly */
+    outline: none; 
+}
+
+@media (max-width: 480px) {
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .review-rating {
+        align-self: flex-start; /* Przenosi gwiazdki na lewą stronę pod datę */
+    }
+    h1{
+        font-size: 20px;
+    }
+}
+
+
+/* Main Header Layout */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #112E81;
+    border-bottom: 1px solid #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Navigation Wrappers to keep Title perfectly centered */
+.header-nav-left,
+.header-nav-right {
+    flex: 1;
+    display: flex;
+}
+
+.header-nav-right {
+    justify-content: flex-end;
+}
+
+/* Title Styling */
+.header-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin: 0;
+    text-align: center;
+    flex: 2; /* Takes double space to secure central position */
+}
+
+/* Beautiful Nav Links Styling */
+.back-link {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+    text-decoration: none;
+    background-color: #f1f5f9;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.back-link:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+/* MOBILE RESPONSIVENESS (Screens under 600px) */
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        text-align: center;
+    }
+
+    /* Change navigation layout on mobile to side-by-side buttons */
+    .header-nav-left,
+    .header-nav-right {
+        flex: none;
+        width: auto;
+    }
+    
+    /* Order elements for a natural mobile reading flow */
+    .header-title {
+        order: 1;
+        font-size: 24px;
+        width: 100%;
+    }
+    
+    .header-nav-left {
+        order: 2;
+    }
+    
+    .header-nav-right {
+        order: 3;
+    }
+
+    /* If you want buttons side-by-side under the title on mobile, 
+       we can group them using a helper row container */
+    .main-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    
+    .header-title {
+        grid-column: 1 / span 2;
+        margin-bottom: 8px;
+    }
+}
+
