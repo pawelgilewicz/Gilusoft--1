@@ -14,3 +14,4 @@ title varchar(60),
 content varchar(2000),
 image_url VARCHAR(500)
 )
+
